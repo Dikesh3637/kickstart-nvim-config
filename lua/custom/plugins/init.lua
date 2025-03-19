@@ -62,7 +62,6 @@ return {
   --     end,
   --   },
   -- },
-  --
   --gruvbox.nvim
   {
     'ellisonleao/gruvbox.nvim',
@@ -168,21 +167,30 @@ return {
     end,
   },
   -- codeium ai completion
+  -- {
+  --   'Exafunction/codeium.nvim',
+  --   dependencies = {
+  --     'nvim-lua/plenary.nvim',
+  --     'hrsh7th/nvim-cmp',
+  --   },
+  --   config = function()
+  --     require('codeium').setup {}
+  --   end,
+  -- },
+  -- --autopair plugin
+  -- {
+  --   'windwp/nvim-autopairs',
+  --   event = 'InsertEnter',
+  --   opts = {},
+  -- },
+  -- supermaven code completion
   {
-    'Exafunction/codeium.nvim',
-    dependencies = {
-      'nvim-lua/plenary.nvim',
-      'hrsh7th/nvim-cmp',
-    },
+    'supermaven-inc/supermaven-nvim',
     config = function()
-      require('codeium').setup {}
+      require('supermaven-nvim').setup {
+        disable_inline_completion = true,
+      }
     end,
-  },
-  --autopair plugin
-  {
-    'windwp/nvim-autopairs',
-    event = 'InsertEnter',
-    opts = {},
   },
   --move.nvim
   {
